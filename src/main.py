@@ -1,9 +1,10 @@
-import model
-from stream_wrapper import StreamWrapper
-from debug import Debug
-from agents import MyStrategy
 import socket
 import sys
+from stream_wrapper import StreamWrapper
+
+from aicup2019 import model
+from aicup2019.debug import Debug
+from aicup2019.agent.quickstart import QuickAgent
 
 
 class Runner:
@@ -19,7 +20,7 @@ class Runner:
         self.writer.flush()
 
     def run(self):
-        strategy = MyStrategy()
+        strategy = QuickAgent()
         debug = Debug(self.writer)
 
         while True:

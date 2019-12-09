@@ -1,8 +1,7 @@
-import numpy as np
-import model
+from aicup2019 import model
 
 
-class MyStrategy:
+class QuickAgent(object):
     def __init__(self):
         pass
 
