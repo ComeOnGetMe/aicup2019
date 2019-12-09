@@ -4,7 +4,7 @@ class PlayerView:
         self.my_id = my_id
         self.game = game
     @staticmethod
-def read_from(stream):
+    def read_from(stream):
         my_id = stream.read_int()
         game = Game.read_from(stream)
         return PlayerView(my_id, game)
